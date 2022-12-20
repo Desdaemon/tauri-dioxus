@@ -1,0 +1,10 @@
+[[hooks]]
+stage = "pre_build"
+command = "npx"
+command_arguments = ["tailwindcss", "-i", "src/root.css", "-o", "assets/styles.css", "--minify"]
+
+# Uncomment to see file sizes after compilation
+# [[hooks]]
+# stage = "post_build"
+# command = "du"
+# command_arguments = ["-ah", "dist"]

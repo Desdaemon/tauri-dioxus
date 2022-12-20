@@ -1,0 +1,8 @@
+[app]
+name = "tauri-dioxus"
+stylized-name = "Tauri Dioxus"
+domain = "example.com"
+template-pack = "wry"
+
+[apple]
+development-team = "TODOID"

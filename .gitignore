@@ -1,0 +1,13 @@
+# Rust
+target/
+**/*.rs.bk
+
+# tauri-mobile
+.cargo/
+/gen
+
+# macOS
+.DS_Store
+node_modules
+dist
+assets/styles.css
