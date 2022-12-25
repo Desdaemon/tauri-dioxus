@@ -18,7 +18,7 @@ pub fn app(cx: Scope) -> Element {
 fn Todos(cx: Scope) -> Element {
     let todos = use_state(&cx, Rc::<RwLock<Vec<String>>>::default);
 
-    cx.render(rsx! {
+    cx.render(rsx!(
         h1 {class: "text-3xl my-4", "Plans"}
         form {
             prevent_default: "onsubmit",
@@ -40,11 +40,11 @@ fn Todos(cx: Scope) -> Element {
                     format!("{}. {todo}", idx + 1)
                 }
             })
-            todos.read().unwrap().is_empty().then(|| rsx! {
-                p {class: "text-3xl p-2",
+            if todos.read().unwrap().is_empty() {
+                rsx!(p {class: "text-3xl p-2",
                     "You're all done!"
-                }
-            })
+                })
+            }
         }
-    })
+    ))
 }
